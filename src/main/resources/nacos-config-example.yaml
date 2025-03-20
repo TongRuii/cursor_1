@@ -1,0 +1,33 @@
+# 风控服务配置
+risk-control:
+  # 是否启用风控服务
+  enabled: true
+  # 启用的第三方服务列表（按顺序）
+  enabled-services:
+    - qichacha
+    - tianyan
+  # 第三方服务配置
+  third-party:
+    # 企查查配置
+    qichacha:
+      name: 企查查
+      enabled: true
+      url: https://api.qichacha.com
+      auth:
+        type: apiKey
+        api-key: your-api-key
+        api-secret: your-api-secret
+      timeout: 5000
+      retry-times: 3
+      weight: 2
+    # 天眼查配置
+    tianyan:
+      name: 天眼查
+      enabled: true
+      url: https://api.tianyancha.com
+      auth:
+        type: token
+        token: your-token
+      timeout: 5000
+      retry-times: 3
+      weight: 1 

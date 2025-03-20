@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: risk-control-service
+
+# 日志配置
+logging:
+  level:
+    com.riskcontrol: info
+    org.springframework.web: info 
